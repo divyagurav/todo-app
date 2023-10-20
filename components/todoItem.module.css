@@ -1,0 +1,23 @@
+.list {
+  background-color: #681f7a;
+  color: white;
+  padding: 1px;
+  height: 60px;
+  display: inline-flex;
+  width: 100%;
+  margin: 4px;
+  padding-left: 10px;
+}
+
+.actions button {
+  margin-left: 450px;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 9px;
+}
+
+.check h3 {
+  margin-left: 50%;
+  margin-top: 10%;
+}
