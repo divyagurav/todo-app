@@ -1,16 +1,14 @@
-import React, { Fragment, useRef } from "react";
+import React, { Fragment, useRef, useState } from "react";
 
 import classes from "./TodoForm.module.css";
 
 const TodoForm = (props) => {
   const nameRef = useRef("");
 
-  const submithandler = (event) => {
+  const submithandler = async (event) => {
     event.preventDefault();
-
     const enteredName = nameRef.current.value;
-    props.onAdd(enteredName);
-    localStorage.setItem("name", enteredName);
+    await props.onAdd(enteredName);
   };
 
   return (
