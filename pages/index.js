@@ -3,9 +3,13 @@ import TodoForm from "../components/TodoForm";
 export default function Home() {
   async function addHandler(enteredTodoName) {
     console.log(enteredTodoName);
+
     const response = await fetch("/api/new", {
       method: "POST",
-      body: JSON.stringify(enteredTodoName),
+      body: JSON.stringify({
+        name: enteredTodoName,
+        status: "InComplete",
+      }),
       headers: {
         "Content-Type": "application/json",
       },
